@@ -1,0 +1,45 @@
+html{
+	box-sizing:border-box;
+}
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+body{
+    margin: 0;
+    font-family: "Roboto", "Myriad Pro", "OpenSans", serif;
+    color: #515151;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+  }
+  .wrapper{
+      margin: 0 auto;
+      width: 1110px;
+      height: 1719px;
+  }
+  .logo{
+      display: block;
+      width: 80px;
+      font-size: 30px;
+      line-height: 32px; 
+      text-transform: uppercase;
+  }
+  .logo::first-letter{
+      color: #1abc9c;
+  }
+  .menu-nav{
+      float: right;
+      font-family: "OpenSans";
+      height: 14px;
+      font-weight: bold;
+      list-style: none;
+  }
+  .menu-nav-item a{
+      font-size: 14px;
+      color: #555252;      
+      text-transform: uppercase;
+      text-decoration: none;
+      
+  }
