@@ -19,27 +19,56 @@ body{
       width: 1110px;
       height: 1719px;
   }
-  .logo{
-      display: block;
-      width: 80px;
+   .logo{
+      font-family: "Roboto";
+      float: left;
+      width: 150px;
       font-size: 30px;
       line-height: 32px; 
       text-transform: uppercase;
   }
   .logo::first-letter{
+      font-weight: bold;
       color: #1abc9c;
   }
   .menu-nav{
-      float: right;
+      width: 1140px;
       font-family: "OpenSans";
       height: 14px;
       font-weight: bold;
-      list-style: none;
   }
-  .menu-nav-item a{
+  ul{
+    float: right;
+    list-style: none;   
+  }
+  .menu-nav-item{
+      float: left;
+      margin-top: 20px;
+      margin-right: 23px;
+  }
+  .menu-nav-item a{ 
       font-size: 14px;
-      color: #555252;      
+      color: #555252; 
       text-transform: uppercase;
       text-decoration: none;
-      
   }
+  .clearfix::after{
+      content: "";
+      display: table;
+      clear: both;
+  }
+  img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+.one-feat{
+margin: 0 auto;
+font-family: "Roboto";
+text-align: center;
+text-transform: uppercase;
+margin-top: 74px;
+margin-bottom: 129px;
+font-size: 48px;
+height: 32px;
+}
