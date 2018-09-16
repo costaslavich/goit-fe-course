@@ -1,0 +1,15 @@
+html {
+  box-sizing: borders-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.page {
+  margin: 0;
+  padding: 0 15px;
+  width: 1155px;
+}
