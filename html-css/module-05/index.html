@@ -6,12 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>index.html</title>
-  <style>
+  <!--<style>
     HTML {
       background: url('img/homework-05.jpg') 50% 0 no-repeat;
     }
-  </style>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans,Roboto:400,700" rel="stylesheet">
+  </style>-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans,Roboto:300,400,600,700"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -41,35 +42,41 @@
         </li>
       </ul>
     </nav>
-    <img src="img/paris_tours.jpg" width="1600" alt="Paris Tours">
-    <div>button-left</div>
-    <h2>Affordable Paris Tours</h2>
-    <p>City Tours / Tour Tickets / Tour Guides</p>
-    <div>button-right</div>
   </header>
 
   <main class="page-main">
-    <section>
-      <h2>New Collection</h2>
-      <ul>
-        <li>
+    <div class="slider">
+      <div class="slider-btn">
+        <button class="btn-ctrl btn-ctrl-prev">left</button>
+        <button class="btn-ctrl btn-ctrl-next">right</button>
+        <div class="slider-list">
+          <h1 class="slider-title">Affordable Paris Tours</h1>
+          <p class="slider-descr">City Tours / Tour Tickets / Tour Guides</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <h2 class="section-title">New Collection</h2>
+      <ul class="section-goods">
+        <li class="section-goods-item">
           <img src="img/blue_tshirt.jpg" width="255" height="322" alt="Men in blue tshirt">
-          <p>Blur Tshirt</p>
+          <p class="section-goods-descr">Blue Tshirt</p>
           <p>$26</p>
         </li>
-        <li>
+        <li class="section-goods-item">
           <img src="img/woman_shirt.jpg" width="255" height="322" alt="Woman shirt">
-          <p>Woman Shirt</p>
+          <p class="section-goods-descr">Woman Shirt</p>
           <p>$31</p>
         </li>
-        <li>
+        <li class="section-goods-item">
           <img src="img/yellow_tshirt.jpg" width="255" height="322" alt="Men in yellow tshirt">
-          <p>Yellow Tshirt</p>
+          <p class="section-goods-descr">Yellow Tshirt</p>
           <p>$21</p>
         </li>
-        <li>
+        <li class="section-goods-item">
           <img src="img/cool_lingerie.jpg" width="255" height="322" alt="Cool lingerie for woman">
-          <p>Cool Lingerie</p>
+          <p class="section-goods-descr">Cool Lingerie</p>
           <p>$56</p>
         </li>
       </ul>
