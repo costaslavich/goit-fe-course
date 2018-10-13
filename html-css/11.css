@@ -35,5 +35,9 @@ button {
 }
 
 .signup-form input::placeholder {
-  color: red;
+  color: rgba(255, 0, 0, 0.144);
+}
+
+.signup-form textarea::placeholder {
+  color: rgba(255, 0, 0, 0.548);
 }
