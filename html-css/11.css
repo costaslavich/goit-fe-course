@@ -34,10 +34,81 @@ button {
   color: #212121;
 }
 
+.signup-form > .section {
+  display: flex;
+  flex-direction: column;
+}
+
 .signup-form input::placeholder {
   color: rgba(255, 0, 0, 0.144);
 }
 
 .signup-form textarea::placeholder {
   color: rgba(255, 0, 0, 0.548);
+}
+
+.signup-form textarea {
+  resize: none;
+  width: 100%;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list li {
+  display: flex;
+  flex-direction: column;
+}
+
+.list li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.info input {
+  color: red;
+  flex-grow: 1;
+  border: none;
+  border-bottom: 1px solid #212121;
+}
+
+.info input:invalid {
+  border-color: red;
+}
+
+.info input:valid {
+  border-color: aquamarine;
+}
+
+.info input:required {
+}
+
+.section:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  font-family: inherit;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: #ff2e63;
+  cursor: pointer;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  margin: 0 4px;
+  border: 1px solid saddlebrown;
+  border-radius: 2px;
+}
+
+.button:hover {
+  background-color: skyblue;
 }
