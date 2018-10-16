@@ -82,9 +82,6 @@ button {
   border-color: aquamarine;
 }
 
-.info input:required {
-}
-
 .section:not(:last-child) {
   margin-bottom: 16px;
 }
