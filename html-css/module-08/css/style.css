@@ -131,6 +131,6 @@ header {
   margin: 0 auto;
 }
 
-.tv-set .partners-image::before {
+li .partners-image::before {
   background-image: url(../img/tv-set.png);
 }
