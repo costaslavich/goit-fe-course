@@ -1,0 +1,136 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  background-image: url(../img/header-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navigation {
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 110px;
+}
+
+.navigation a {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 16px;
+  color: #ffffff;
+}
+
+.navigation .sign {
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+}
+
+.banner {
+  margin: 0 auto;
+  padding: 0 14px;
+  width: 320px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.banner-name {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.banner-dreams {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.banner-descr {
+  margin: 0;
+  padding: 0 30px;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.banner-link {
+  margin: 0;
+  display: inline-block;
+  background-color: rgb(255, 78, 80);
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1.2;
+  text-decoration: none;
+  padding: 15px 40px;
+  cursor: pointer;
+  margin-bottom: 134px;
+}
+
+.partners-headline {
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  font-family: 'Montserrat';
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  padding-top: 65px;
+  padding-bottom: 16px;
+}
+
+.partners-section {
+  margin: 0;
+  padding: 0;
+}
+
+.partners-item {
+  margin: 0 auto;
+  width: 246px;
+  list-style-type: none;
+  text-align: center;
+  position: relative;
+}
+
+.partners-image {
+  margin: 0 auto;
+}
+
+.tv-set .partners-image::before {
+  background-image: url(../img/tv-set.png);
+}
