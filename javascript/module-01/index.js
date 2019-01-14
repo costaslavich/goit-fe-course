@@ -7,14 +7,14 @@ let message = ' ';
 let userLogin = prompt('Введите Login');
 
 if (!userLogin) {
-  message = 'Пользователь нажал отмена Login!';
+  message = 'Отменено пользователем!';
 } else if (userLogin !== ADMIN_LOGIN) {
   message = 'Доступ запрещен, неверный логин!';
 } else {
   message = 'Login верный!';
   let userPassword = prompt('Введите Password');
   if (!userPassword) {
-    message = 'Пользователь нажал отмена Password!';
+    message = 'Отменено пользователем!';
   } else if (userPassword !== ADMIN_PASSWORD) {
     message = 'Доступ запрещен, неверный пароль!';
   } else {
@@ -22,4 +22,5 @@ if (!userLogin) {
     message = 'Добро пожаловать!';
   }
 }
-console.log(message);
+alert(message);
+//console.log(message);
