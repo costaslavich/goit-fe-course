@@ -1,30 +1,7 @@
-import { PRIORITY_TYPES, ICON_TYPES, NOTE_ACTIONS } from './utils/constants';
-import initialNotes from './initial-notes';
+import { ICON_TYPES, refs } from './utils/constants';
 import Notepad from './notepad-model';
-import {
-  createListItem,
-  createNoteContent,
-  createNoteFooter,
-  createNotePriority,
-  createNoteAction,
-  renderNoteList,
-  addItemToList,
-} from './view';
-
-//  REFS
-
-const refs = {
-  list: document.querySelector('.note-list'),
-  editor: document.querySelector('.note-editor'),
-  editorInput: document.querySelector('.note-editor input'),
-  filter: document.querySelector('.search-form__input'),
-};
-
-Notepad.PRIORITIES = {
-  0: { id: 0, value: 0, name: 'Low' },
-  1: { id: 1, value: 1, name: 'Normal' },
-  2: { id: 2, value: 2, name: 'High' },
-};
+import initialNotes from '../assets/notes.json';
+import { renderNoteList, addItemToList } from './view';
 
 const notepad = new Notepad(initialNotes);
 

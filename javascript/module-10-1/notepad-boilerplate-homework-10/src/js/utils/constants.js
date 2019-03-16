@@ -17,3 +17,10 @@ export const NOTE_ACTIONS = {
   INCREASE_PRIORITY: 'increase-priority',
   DECREASE_PRIORITY: 'decrease-priority',
 };
+
+export const refs = {
+  list: document.querySelector('.note-list'),
+  editor: document.querySelector('.note-editor'),
+  editorInput: document.querySelector('.note-editor input'),
+  filter: document.querySelector('.search-form__input'),
+};
