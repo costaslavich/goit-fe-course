@@ -1,6 +1,5 @@
-import { ICON_TYPES, NOTE_ACTIONS } from './utils/constants';
+import { ICON_TYPES, NOTE_ACTIONS } from './constants';
 import Notepad from './notepad-model';
-
 
 export const createListItem = ({ id, title, body, priority }) => {
   const listItem = document.createElement('li');

@@ -1,4 +1,4 @@
-import { PRIORITY_TYPES } from './utils/constants';
+import { PRIORITY_TYPES } from './constants';
 
 export default class Notepad {
   static getPriorityName(priorityId) {

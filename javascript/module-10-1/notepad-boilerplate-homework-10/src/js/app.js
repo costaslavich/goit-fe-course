@@ -1,7 +1,7 @@
 import { ICON_TYPES, refs } from './utils/constants';
-import Notepad from './notepad-model';
+import Notepad from './utils/notepad-model';
 import initialNotes from '../assets/notes.json';
-import { renderNoteList, addItemToList } from './view';
+import { renderNoteList, addItemToList } from './utils/view';
 
 const notepad = new Notepad(initialNotes);
 
