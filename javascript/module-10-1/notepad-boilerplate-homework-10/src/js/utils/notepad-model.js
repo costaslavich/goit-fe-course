@@ -1,19 +1,11 @@
 import { PRIORITY_TYPES } from './constants';
 
+const shortid = require('shortid');
+
 export default class Notepad {
   static getPriorityName(priorityId) {
     return Notepad.PRIORITIES[priorityId].name;
   }
-
-  // static generateUniqueId = () =>
-  //   Math.random()
-  //     .toString(36)
-  //     .substring(2, 15) +
-  //   Math.random()
-  //     .toString(36)
-  //     .substring(2, 15);
-
-  static id = require('shortid');
 
   constructor(notes = []) {
     this._notes = notes;
@@ -31,7 +23,7 @@ export default class Notepad {
 
   saveNote(headline, text) {
     const newItem = {
-      id: Notepad.id.generate(),
+      id: shortid.generate(),
       title: headline,
       body: text,
       priority: PRIORITY_TYPES.LOW,
