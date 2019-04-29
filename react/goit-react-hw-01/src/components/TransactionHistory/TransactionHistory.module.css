@@ -26,10 +26,6 @@
   border-color: rgb(228, 233, 240);
 }
 
-.transaction_body {
-  font-family: 'Haettenschweiler', 'Arial Narrow' sans-serif;
-}
-
 .transaction_item {
   display: flex;
   border-style: solid;
