@@ -1,0 +1,39 @@
+.transaction_list {
+  margin: 0;
+  padding: 0;
+  margin-top: 100px;
+  list-style-type: none;
+}
+
+.transaction_history {
+  margin-top: 30px;
+  display: flex;
+  width: 900px;
+  flex-basis: content;
+  justify-content: space-around;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgb(194, 208, 226);
+}
+
+.transaction_head {
+  display: flex;
+  font-family: 'Franklin Gothic', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(228, 233, 240);
+}
+
+.transaction_body {
+  font-family: 'Haettenschweiler', 'Arial Narrow' sans-serif;
+}
+
+.transaction_item {
+  display: flex;
+  border-style: solid;
+  text-transform: uppercase;
+  border-width: 1px;
+  border-color: rgb(91, 151, 230);
+}
