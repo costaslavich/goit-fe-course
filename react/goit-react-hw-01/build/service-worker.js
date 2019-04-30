@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/goit-fe-course/react/goit-react-hw-01/build/precache-manifest.88a402ff9a6a67d69f8edcc56e8491e8.js"
+  "/goit-fe-course/precache-manifest.9fd418386f80cd77d8bbadee95929d1b.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/goit-fe-course/react/goit-react-hw-01/build/index.html", {
+workbox.routing.registerNavigationRoute("/goit-fe-course/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

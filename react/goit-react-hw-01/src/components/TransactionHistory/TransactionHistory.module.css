@@ -1,35 +1,34 @@
-.transaction_list {
+.transaction_history {
   margin: 0;
   padding: 0;
-  margin-top: 100px;
+  margin-top: 10px;
+  display: table;
+  border-collapse: separate;
+  text-align: left;
+}
+
+.transaction_list {
   list-style-type: none;
 }
 
-.transaction_history {
-  margin-top: 30px;
-  display: flex;
-  width: 900px;
-  flex-basis: content;
-  justify-content: space-around;
-  border-style: solid;
-  border-width: 3px;
-  border-color: rgb(194, 208, 226);
-}
-
 .transaction_head {
-  display: flex;
   font-family: 'Franklin Gothic', sans-serif;
-  font-size: 18px;
-  line-height: 1.5;
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgb(228, 233, 240);
+  font-size: 15px;
+  padding: 10px 8px;
+  color: #039;
+  background: #b9c9fe;
+  border-top: 4px solid #aabcfe;
+  border-bottom: 1px solid #fff;
+  font-weight: normal;
 }
 
-.transaction_item {
-  display: flex;
-  border-style: solid;
-  text-transform: uppercase;
-  border-width: 1px;
-  border-color: rgb(91, 230, 114);
+.transaction_body {
+  border-bottom: 1px solid #fff;
+  background: #e8edff;
+  color: #669;
+  border-top: 1px solid transparent;
+  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 13px;
+  padding: 9px 8px;
+  list-style-type: none;
 }

@@ -6,25 +6,25 @@ const Transaction = ({ id, type, amount, currency }) => (
   <table className={styles.transaction_history}>
     <thead className={styles.transaction_head}>
       <tr>
-        <th className={styles.transaction_item}>{id}</th>
-        <th className={styles.transaction_item}>{type}</th>
-        <th className={styles.transaction_item}>{amount}</th>
-        <th className={styles.transaction_item}>{currency}</th>
+        <th className={styles.transaction_item}>ID</th>
+        <th className={styles.transaction_item}>TYPE</th>
+        <th className={styles.transaction_item}>AMOUNT</th>
+        <th className={styles.transaction_item}>CURRENCY</th>
       </tr>
     </thead>
 
     <tbody className={styles.transaction_body}>
       <tr>
-        <th className={styles.transaction_item}>{id}</th>
-        <th className={styles.transaction_item}>{type}</th>
-        <th className={styles.transaction_item}>{amount}</th>
-        <th className={styles.transaction_item}>{currency}</th>
+        <td className={styles.transaction_item}>{id}</td>
+        <td className={styles.transaction_item}>{type}</td>
+        <td className={styles.transaction_item}>{amount}</td>
+        <td className={styles.transaction_item}>{currency}</td>
       </tr>
     </tbody>
   </table>
 );
 
-export const TransactionHistory = ({ items = [] }) => (
+const TransactionHistory = ({ items = [] }) => (
   <ul className={styles.transaction_list}>
     {items.map(item => (
       <li key={item.id}>
@@ -33,6 +33,17 @@ export const TransactionHistory = ({ items = [] }) => (
     ))}
   </ul>
 );
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+};
 
 Transaction.propTypes = {
   id: PropTypes.string.isRequired,

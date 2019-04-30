@@ -10,11 +10,13 @@ const PricingItem = ({ label, icon, capacity, price, description }) => (
     <p className={styles.capacity}>{capacity} Storage</p>
     <p className={styles.description}>{description}</p>
     <p className={styles.price}>${price}/MO</p>
-    <button className={styles.button}>Get Started</button>
+    <button className={styles.button} type="button">
+      Get Started
+    </button>
   </div>
 );
 
-export const PricingPlan = ({ items }) => (
+const PricingPlan = ([items]) => (
   <ul className={styles.pricing_plan}>
     {items.map(item => (
       <li key={item.price}>
@@ -25,9 +27,15 @@ export const PricingPlan = ({ items }) => (
 );
 
 PricingItem.propTypes = {
-  label: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
-  capacity: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-  description: PropTypes.string.isRequired,
-};
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      icon: PropTypes.string.isRequired,
+      capacity: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
+      description: PropTypes.string.isRequired,
+    }).isRequired,
+  ),
+}.isRequired;
+
+export default PricingPlan;
