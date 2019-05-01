@@ -1,0 +1,85 @@
+/* html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+body.modal-visible .backdrop {
+  opacity: 1;
+  visibility: visible;
+}
+
+.backdrop {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.333);
+  z-index: 9999;
+}
+
+ {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: (15, 55, 85);
+  width: 600px;
+  height: 450px;
+  padding: 16px;
+}
+
+.post-link {
+  border: 1px solid red;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #212121;
+  color: #ffff;
+  display: inline-block;
+  padding: 8px 24px;
+}
+
+.post-link-active {
+  background-color: blue;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  background-color: rebeccapurple;
+  color: #ffff;
+} */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+}
+
+.btn {
+  font-size: 32px;
+  padding: 4px 16px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.value {
+  margin: 0 16px;
+  font-size: 64px;
+}
