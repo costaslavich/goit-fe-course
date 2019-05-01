@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Profile from './Profile/Profile';
 import Stats from './Stats/Stats';
-import PricingPlan from './PricingItem/PricingItem';
+import PricingPlan from './PricingItem/PricingPlan';
 import pricingPlanItems from '../pricing-plan.json';
 import TransactionHistory from './TransactionHistory/TransactionHistory';
 import transactions from '../transactions.json';
