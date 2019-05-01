@@ -25,10 +25,11 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+  padding-bottom: 134px;
 }
 
 .container {
-  margin: 0 auto;
+  margin: 0;
   padding: 0 10px;
 }
 
@@ -64,6 +65,10 @@ header {
   border: 2px solid #ffffff;
 }
 
+.navigation-item a:hover {
+  opacity: 0.5;
+}
+
 .company-name {
   margin: 0;
   padding: 0;
@@ -78,7 +83,7 @@ header {
 .banner {
   margin: 0 auto;
   padding: 0 14px;
-  width: 318px;
+  width: 320px;
   color: #ffffff;
   text-align: center;
 }
@@ -115,7 +120,6 @@ header {
   text-decoration: none;
   padding: 14px 40px;
   cursor: pointer;
-  margin-bottom: 134px;
 }
 
 .partners {
@@ -227,27 +231,30 @@ header {
   font-weight: 700;
   text-decoration: none;
   color: rgb(255, 78, 80);
-  display: block;
-  width: 278px;
+  display: table;
   text-align: center;
   border: 2px solid rgb(255, 78, 80);
   padding: 18px 74px;
   border-radius: 20px;
-  padding: 10px;
+  padding: 10px 20px;
 }
 
-@media (min-width: 319px) {
+@media (min-width: 767px) and (max-width: 1169px) {
   header {
     background-image: url(../img/background-tablet.jpg);
   }
 
-  .header-top {
+  .container {
+    margin: 0 auto;
+    max-width: 660px;
+  }
+
+  .name-located {
     display: flex;
     justify-content: space-between;
-    flex-direction: row-reverse;
     align-items: center;
-    max-width: 662px;
-    margin: 0 auto 115px;
+    flex-direction: row-reverse;
+    margin-bottom: 165px;
   }
 
   .navigation {
@@ -277,7 +284,6 @@ header {
 
   .banner-link {
     padding: 14px 20px;
-    margin-bottom: 233px;
   }
 
   .partners-headline {
@@ -315,17 +321,62 @@ header {
   }
 }
 
-@media (min-width: 767px) {
+@media (min-width: 1170px) {
   header {
     background-image: url(../img/background-desctop.jpg);
   }
 
-  .header-top {
-    max-width: 942px;
+  .container {
+    margin: 0 auto;
+    max-width: 940px;
+  }
+
+  .name-located {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-top: 20px;
+    margin-bottom: 132px;
+  }
+
+  .navigation {
+    margin: 0;
+    padding: 0;
+  }
+
+  .company-name {
+    margin: 0;
+  }
+
+  .banner {
+    width: 620px;
+  }
+
+  .banner-dreams {
+    font-size: 52px;
+    margin-bottom: 30px;
+  }
+
+  .banner-descr {
+    font-size: 24px;
+    padding-bottom: 16px;
+  }
+
+  .banner-link {
+    padding: 12px 18px;
+    margin-bottom: 238px;
+  }
+
+  .partners-headline {
+    padding-bottom: 30px;
   }
 
   .partners-section {
-    max-width: 942px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
   }
 
   .partners-item {
