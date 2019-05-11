@@ -21,13 +21,13 @@ export default class Reader extends Component {
 
   handlePrev = () => {
     this.setState(prevState => ({
-      indexCurrentPage: prevState.value - this.props.step,
+      indexCurrentPage: prevState.indexCurrentPage - this.props.step,
     }));
   };
 
   handleNext = () => {
     this.setState(prevState => ({
-      indexCurrentPage: prevState.value + this.props.step,
+      indexCurrentPage: prevState.indexCurrentPage + this.props.step,
     }));
   };
 
@@ -38,8 +38,13 @@ export default class Reader extends Component {
     return (
       <div className={styles.reader}>
         <Publication item={items[indexCurrentPage]} />
-        <Counter currentPage={indexCurrentPage + 1} totalPages={items.length} />
-        <Controls handlePrev={this.handlePrev} handleNext={this.handleNext} />
+        <Counter currentPage={indexCurrentPage} totalPages={items.length} />
+        <Controls
+          handlePrev={this.handlePrev}
+          handleNext={this.handleNext}
+          currentPage={indexCurrentPage}
+          totalPages={items.length}
+        />
       </div>
     );
   }
