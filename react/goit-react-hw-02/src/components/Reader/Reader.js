@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Publication from './Publication';
-import Counter from '../Counter/Counter';
-import Controls from '../Controls/Controls';
+import Counter from './Counter/Counter';
+import Controls from './Controls/Controls';
 import styles from './Reader.module.css';
 
 export default class Reader extends Component {
-  static defaultProps = {
-    step: 1,
-  };
-
   static propTypes = {
-    step: PropTypes.number,
-    items: PropTypes.arrayOf(Object).isRequired,
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        text: PropTypes.string.isRequired,
+      }).isRequired,
+    ).isRequired,
   };
 
   state = {
@@ -21,13 +22,13 @@ export default class Reader extends Component {
 
   handlePrev = () => {
     this.setState(prevState => ({
-      indexCurrentPage: prevState.indexCurrentPage - this.props.step,
+      indexCurrentPage: prevState.indexCurrentPage - 1,
     }));
   };
 
   handleNext = () => {
     this.setState(prevState => ({
-      indexCurrentPage: prevState.indexCurrentPage + this.props.step,
+      indexCurrentPage: prevState.indexCurrentPage + 1,
     }));
   };
 
@@ -42,7 +43,7 @@ export default class Reader extends Component {
         <Controls
           handlePrev={this.handlePrev}
           handleNext={this.handleNext}
-          currentPage={indexCurrentPage}
+          indexCurrentPage={indexCurrentPage}
           totalPages={items.length}
         />
       </div>

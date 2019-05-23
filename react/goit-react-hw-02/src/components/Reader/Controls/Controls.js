@@ -8,7 +8,7 @@ const Controls = ({ handlePrev, handleNext, indexCurrentPage, totalPages }) => (
       className={styles.button}
       type="button"
       onClick={handlePrev}
-      disabled={indexCurrentPage <= 0}
+      disabled={indexCurrentPage < 1}
     >
       Назад
     </button>
@@ -17,7 +17,7 @@ const Controls = ({ handlePrev, handleNext, indexCurrentPage, totalPages }) => (
       className={styles.button}
       type="button"
       onClick={handleNext}
-      disabled={indexCurrentPage >= totalPages}
+      disabled={indexCurrentPage >= totalPages - 1}
     >
       Вперед
     </button>
