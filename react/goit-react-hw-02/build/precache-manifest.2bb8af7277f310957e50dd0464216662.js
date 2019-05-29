@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "9f89edd54c751ea8b1ec",
+    "revision": "b02892c9a93fa982ceee",
     "url": "/goit-fe-course/static/css/main.b9efc6c0.chunk.css"
   },
   {
-    "revision": "9f89edd54c751ea8b1ec",
-    "url": "/goit-fe-course/static/js/main.120ac01a.chunk.js"
+    "revision": "b02892c9a93fa982ceee",
+    "url": "/goit-fe-course/static/js/main.1b44641c.chunk.js"
   },
   {
     "revision": "6fc20f7e957d07e7940e",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/goit-fe-course/static/js/2.3217e3a7.chunk.js"
   },
   {
-    "revision": "8d9f6d4057b872d6bcc6eb14e88930b8",
+    "revision": "84e53a4d64e50473002cdfcab8b1c361",
     "url": "/goit-fe-course/index.html"
   }
 ];

@@ -6,7 +6,6 @@ export default class Controls extends Component {
   static propTypes = {
     onClickDeposit: PropTypes.func.isRequired,
     onClickWithdraw: PropTypes.func.isRequired,
-    balance: PropTypes.number.isRequired,
   };
 
   state = {
@@ -19,21 +18,22 @@ export default class Controls extends Component {
     });
   };
 
-  onCheckedBalance = event => {
-    const name = event.target.textContent;
+  handleClickDeposit = () => {
     const value = Number(this.state.value);
+    this.props.onClickDeposit(value);
 
-    if (value === 0) {
-      alert('Введите сумму для проведения операции!');
-    } else if (name === 'Withdraw' && value > this.props.balance) {
-      alert('На счету недостаточно средств для проведения операции!');
-    } else if (name === 'Deposit') {
-      this.props.onClickDeposit(value, name);
-    } else {
-      this.props.onClickWithdraw(value, name);
-    }
+    this.setState({
+      value: '',
+    });
+  };
 
-    this.setState({ value: '' });
+  handleClickWithdraw = () => {
+    const value = Number(this.state.value);
+    this.props.onClickWithdraw(value);
+
+    this.setState({
+      value: '',
+    });
   };
 
   render() {
@@ -50,14 +50,14 @@ export default class Controls extends Component {
         <button
           type="button"
           className={styles.button}
-          onClick={this.onCheckedBalance}
+          onClick={this.handleClickDeposit}
         >
           Deposit
         </button>
         <button
           type="button"
           className={styles.button}
-          onClick={this.onCheckedBalance}
+          onClick={this.handleClickWithdraw}
         >
           Withdraw
         </button>

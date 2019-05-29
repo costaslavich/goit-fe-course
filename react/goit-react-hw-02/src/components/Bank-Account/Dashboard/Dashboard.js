@@ -8,40 +8,65 @@ const shortid = require('shortid');
 
 const date = new Date();
 
+const Transaction = {
+  DEPOSIT: 'Deposit',
+  WITHDRAW: 'Withdraw',
+};
+
 export default class Dashboard extends Component {
   state = {
     history: [],
     balance: 0,
   };
 
-  onClickButtonDeposit = (value, name) => {
-    const item = {
-      id: shortid.generate(),
-      type: name,
-      amount: value,
-      date: date.toLocaleString(),
-    };
-
-    this.setState(prevState => ({ history: [...prevState.history, item] }));
-
-    this.setState(prevState => ({
-      balance: prevState.balance + value,
-    }));
+  income = () => {
+    const { history } = this.state;
+    return history
+      .filter(transaction => transaction.type === 'Deposit')
+      .reduce((item, itemOperation) => item + itemOperation.amount, 0);
   };
 
-  onClickButtonWithdraw = (value, name) => {
+  expense = () => {
+    const { history } = this.state;
+    return history
+      .filter(transaction => transaction.type === 'Withdraw')
+      .reduce((item, itemOperation) => item + itemOperation.amount, 0);
+  };
+
+  onClickButtonDeposit = value => {
     const item = {
       id: shortid.generate(),
-      type: name,
+      type: Transaction.DEPOSIT,
       amount: value,
       date: date.toLocaleString(),
     };
 
-    this.setState(prevState => ({ history: [...prevState.history, item] }));
+    if (value === 0) {
+      alert('Введите сумму для проведения операции!');
+    } else
+      this.setState(prevState => ({
+        balance: prevState.balance + value,
+        history: [...prevState.history, item],
+      }));
+  };
 
-    this.setState(prevState => ({
-      balance: prevState.balance - value,
-    }));
+  onClickButtonWithdraw = value => {
+    const item = {
+      id: shortid.generate(),
+      type: Transaction.WITHDRAW,
+      amount: value,
+      date: date.toLocaleString(),
+    };
+
+    if (value === 0) {
+      alert('Введите сумму для проведения операции!');
+    } else if (value > this.state.balance) {
+      alert('На счету недостаточно средств для проведения операции!');
+    } else
+      this.setState(prevState => ({
+        balance: prevState.balance - value,
+        history: [...prevState.history, item],
+      }));
   };
 
   render() {
@@ -52,9 +77,12 @@ export default class Dashboard extends Component {
         <Controls
           onClickDeposit={this.onClickButtonDeposit}
           onClickWithdraw={this.onClickButtonWithdraw}
-          balance={balance}
         />
-        <Balance balance={balance} transactions={history} />
+        <Balance
+          balance={balance}
+          income={this.income(history)}
+          expense={this.expense(history)}
+        />
         <TransactionHistory transactions={history} />
       </div>
     );
