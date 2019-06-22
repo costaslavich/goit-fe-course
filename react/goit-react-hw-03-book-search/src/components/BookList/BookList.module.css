@@ -1,0 +1,10 @@
+.BookList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.BookList_Item {
+  border-radius: 2px;
+  margin: 14px;
+  list-style-type: none;
+}
