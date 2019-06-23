@@ -11,7 +11,7 @@
     "react-scripts": "3.0.1",
     "react-spinkit": "^3.0.0"
   },
-  "homepage": "https://costaslavich.github.io/goit-fe-course/goit-react-hw-03-book-search",
+  "homepage": "https://costaslavich.github.io/goit-fe-course/goit-react-hw-03-book-search/build",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
