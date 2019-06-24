@@ -25,13 +25,14 @@ const BookListItem = ({
 BookListItem.defaultProps = {
   rating: 0,
   pageCount: 100,
+  publisher: '',
 };
 
 BookListItem.propTypes = {
   url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  publisher: PropTypes.string.isRequired,
+  publisher: PropTypes.string,
   publishedDate: PropTypes.string.isRequired,
   pageCount: PropTypes.number,
   rating: PropTypes.number,

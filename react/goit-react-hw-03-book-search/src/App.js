@@ -13,7 +13,7 @@ const mapper = items =>
     ({
       id,
       volumeInfo: {
-        imageLinks: { smallThumbnail: url },
+        imageLinks: { thumbnail: url },
         authors: [author],
         averageRating: rating,
         pageCount,
@@ -34,6 +34,11 @@ const mapper = items =>
   );
 
 export default class App extends Component {
+  // static defaultProps = {
+  //   query: '',
+  //   genre: '',
+  // };
+
   state = {
     items: [],
     isLoading: false,
@@ -41,10 +46,10 @@ export default class App extends Component {
   };
 
   componentDidMount() {
-    this.fetchItems({ query: 'react', genre: 'computers' });
+    this.fetchItem({ query: 'react', genre: 'computers' });
   }
 
-  fetchItems = ({ query, genre }) => {
+  fetchItem = ({ query, genre }) => {
     this.setState({ isLoading: true });
 
     articleAPI
@@ -60,7 +65,7 @@ export default class App extends Component {
     const { items, isLoading, error } = this.state;
     return (
       <div>
-        <SearchForm genres={genres} onSubmit={this.fetchItems} />
+        <SearchForm genres={genres} onSubmit={this.fetchItem} />
         {error && <ErrorNotification text={error.message} />}
 
         {isLoading && <Loader />}

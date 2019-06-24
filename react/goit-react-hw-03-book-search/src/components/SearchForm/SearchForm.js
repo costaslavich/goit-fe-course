@@ -5,6 +5,7 @@ import styles from './SearchForm.module.css';
 export default class SearchForm extends Component {
   static propTypes = {
     onSubmit: PropTypes.func.isRequired,
+    genres: PropTypes.string.isRequired,
   };
 
   state = { query: '', genre: '' };
