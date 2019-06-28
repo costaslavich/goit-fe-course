@@ -26,6 +26,7 @@ BookListItem.defaultProps = {
   rating: 0,
   pageCount: 100,
   publisher: '',
+  publishedDate: '',
 };
 
 BookListItem.propTypes = {
@@ -33,7 +34,7 @@ BookListItem.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   publisher: PropTypes.string,
-  publishedDate: PropTypes.string.isRequired,
+  publishedDate: PropTypes.string,
   pageCount: PropTypes.number,
   rating: PropTypes.number,
 };

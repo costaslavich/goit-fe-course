@@ -65,8 +65,8 @@ export default class App extends Component {
     const { items, isLoading, error } = this.state;
     return (
       <div>
-        <SearchForm genres={genres} onSubmit={this.fetchItem} />
         {error && <ErrorNotification text={error.message} />}
+        <SearchForm genres={genres} onSubmit={this.fetchItem} />
 
         {isLoading && <Loader />}
         {items.length > 0 && <BookList items={items} />}
