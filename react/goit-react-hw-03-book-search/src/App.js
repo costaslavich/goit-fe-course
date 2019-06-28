@@ -34,10 +34,10 @@ const mapper = items =>
   );
 
 export default class App extends Component {
-  // static defaultProps = {
-  //   query: '',
-  //   genre: '',
-  // };
+  static defaultProps = {
+    query: '',
+    subject: '',
+  };
 
   state = {
     items: [],
@@ -46,14 +46,14 @@ export default class App extends Component {
   };
 
   componentDidMount() {
-    this.fetchItem({ query: 'react', genre: 'computers' });
+    this.fetchItem({ query: 'react', subject: 'computers' });
   }
 
-  fetchItem = ({ query, genre }) => {
+  fetchItem = ({ query, subject }) => {
     this.setState({ isLoading: true });
 
     articleAPI
-      .fetchItems(query, genre)
+      .fetchItems(query, subject)
       .then(({ data }) => {
         this.setState({ items: mapper(data.items) });
       })

@@ -23,6 +23,9 @@
     "lint:fix": "eslint src/**/*.js --fix",
     "lint:format": "prettier src/**/*.{js,css,json} --write"
   },
+  "react/forbid-prop-types": [
+    "desable"
+  ],
   "eslintConfig": {
     "extends": "react-app"
   },

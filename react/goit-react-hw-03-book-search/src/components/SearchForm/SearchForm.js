@@ -5,10 +5,10 @@ import styles from './SearchForm.module.css';
 export default class SearchForm extends Component {
   static propTypes = {
     onSubmit: PropTypes.func.isRequired,
-    genres: PropTypes.string.isRequired,
+    genres: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
-  state = { query: '', genre: '' };
+  state = { query: '', subject: '' };
 
   handleChange = e => {
     this.setState({
@@ -18,7 +18,7 @@ export default class SearchForm extends Component {
 
   handleSelect = e => {
     this.setState({
-      genre: e.target.value,
+      subject: e.target.value,
     });
   };
 
@@ -27,7 +27,7 @@ export default class SearchForm extends Component {
 
     this.props.onSubmit({ ...this.state });
 
-    this.setState({ query: '' });
+    this.setState({ query: '', subject: '' });
   };
 
   render() {
