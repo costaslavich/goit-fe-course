@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/goit-fe-course/goit-react-hw-03-book-search/build/static/css/main.16f415f1.chunk.css",
-    "main.js": "/goit-fe-course/goit-react-hw-03-book-search/build/static/js/main.82bac090.chunk.js",
-    "main.js.map": "/goit-fe-course/goit-react-hw-03-book-search/build/static/js/main.82bac090.chunk.js.map",
+    "main.js": "/goit-fe-course/goit-react-hw-03-book-search/build/static/js/main.1e5dfccc.chunk.js",
+    "main.js.map": "/goit-fe-course/goit-react-hw-03-book-search/build/static/js/main.1e5dfccc.chunk.js.map",
     "runtime~main.js": "/goit-fe-course/goit-react-hw-03-book-search/build/static/js/runtime~main.ad7c0b79.js",
     "runtime~main.js.map": "/goit-fe-course/goit-react-hw-03-book-search/build/static/js/runtime~main.ad7c0b79.js.map",
     "static/js/2.e6b7a691.chunk.js": "/goit-fe-course/goit-react-hw-03-book-search/build/static/js/2.e6b7a691.chunk.js",
     "static/js/2.e6b7a691.chunk.js.map": "/goit-fe-course/goit-react-hw-03-book-search/build/static/js/2.e6b7a691.chunk.js.map",
     "index.html": "/goit-fe-course/goit-react-hw-03-book-search/build/index.html",
-    "precache-manifest.107e4d993602e406d840d433048fe10b.js": "/goit-fe-course/goit-react-hw-03-book-search/build/precache-manifest.107e4d993602e406d840d433048fe10b.js",
+    "precache-manifest.bfbf9ea5ef0a9bfac3c658b33b7c7b57.js": "/goit-fe-course/goit-react-hw-03-book-search/build/precache-manifest.bfbf9ea5ef0a9bfac3c658b33b7c7b57.js",
     "service-worker.js": "/goit-fe-course/goit-react-hw-03-book-search/build/service-worker.js",
     "static/css/main.16f415f1.chunk.css.map": "/goit-fe-course/goit-react-hw-03-book-search/build/static/css/main.16f415f1.chunk.css.map"
   }

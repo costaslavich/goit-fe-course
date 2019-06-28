@@ -27,7 +27,7 @@ export default class SearchForm extends Component {
 
     this.props.onSubmit({ ...this.state });
 
-    this.setState({ query: '', subject: '' });
+    this.setState({ query: '' });
   };
 
   render() {
@@ -41,7 +41,7 @@ export default class SearchForm extends Component {
           onChange={this.handleChange}
           className={styles.input_form}
         />
-        <select onFocus={this.handleSelect} className={styles.select_form}>
+        <select onBlur={this.handleSelect} className={styles.select_form}>
           {genres.map(genre => (
             <option key={genre} value={genre}>
               {genre}
